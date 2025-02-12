@@ -5,6 +5,7 @@
   "description": "AI Utilities.",
   "main": "index.js",
   "scripts": {
+    "pub": "echo \"run npm publish --registry=https://registry.npmjs.org/\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": ["ai", "utilities", "util"],
