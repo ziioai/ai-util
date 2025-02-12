@@ -1,0 +1,18 @@
+{
+  "name": "ai-util",
+  "type": "module",
+  "version": "0.0.1",
+  "description": "AI Utilities.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "ZIIO AI",
+  "license": "MIT",
+  "files": [
+    "index.js",
+    "LICENSE",
+    "README.md"
+  ]
+}
