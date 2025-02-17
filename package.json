@@ -1,5 +1,5 @@
 {
-  "version": "0.0.3",
+  "version": "0.0.4",
   "private": false,
   "type": "module",
   "name": "ai-util",
@@ -26,6 +26,7 @@
   ],
   "main": "./dist/ai-util.umd.cjs",
   "module": "./dist/ai-util.js",
+  "typings": "./dist/ai-util.d.ts",
   "exports": {
     ".": {
       "import": "./dist/ai-util.js",

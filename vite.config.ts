@@ -18,7 +18,7 @@ export default defineConfig({
   // ai-util.mjs ES Module 导出方式
   build: {
     lib: {
-      entry: resolve(__dirname, 'lib/index.ts'),
+      entry: resolve(__dirname, 'lib/ai-util.ts'),
       name: 'ai-util',
       // 构建好的文件名（不包括文件后缀）
       fileName: 'ai-util',
