@@ -5,8 +5,20 @@ export { default as AiClientWithFetch } from './classes/AiClientWithFetch';
 export { default as AiFunc } from './classes/AiFunc';
 export { default as Supplier } from './classes/Supplier';
 
-export type { Message } from './classes/AiFunc';
+// export type { Message } from './classes/AiFunc';
 export type { SupplierDict } from './classes/Supplier';
 
 export { default as functionSettings } from './data/functionSettings';
 export { default as suppliers } from './data/suppliers';
+
+export { LLMRole } from './types/BasicTypes';
+export type {
+  Message,
+  MessagesTemplateItem,
+  MessagesTemplateArgs,
+  LLMModelOptions,
+  ResponseChunkProcessor,
+  ResponseResultProcessor,
+  LLMWorkOptions,
+} from './types/BasicTypes';
+
