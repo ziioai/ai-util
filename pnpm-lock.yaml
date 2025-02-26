@@ -19,10 +19,13 @@ importers:
         version: 4.17.21
       openai:
         specifier: ^4.85.1
-        version: 4.85.1
+        version: 4.85.1(zod@3.24.2)
       vue:
         specifier: ^3.5.13
         version: 3.5.13(typescript@5.7.3)
+      zod:
+        specifier: ^3.24.2
+        version: 3.24.2
     devDependencies:
       '@types/lodash':
         specifier: ^4.17.15
@@ -948,6 +951,9 @@ packages:
   yallist@4.0.0:
     resolution: {integrity: sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==}
 
+  zod@3.24.2:
+    resolution: {integrity: sha512-lY7CDW43ECgW9u1TcT3IoXHflywfVqDYze4waEz812jR/bZ8FHDsl7pFQoSZTz5N+2NqRXs8GBwnAwo3ZNxqhQ==}
+
 snapshots:
 
   '@babel/helper-string-parser@7.25.9': {}
@@ -1580,7 +1586,7 @@ snapshots:
     dependencies:
       whatwg-url: 5.0.0
 
-  openai@4.85.1:
+  openai@4.85.1(zod@3.24.2):
     dependencies:
       '@types/node': 18.19.76
       '@types/node-fetch': 2.6.12
@@ -1589,6 +1595,8 @@ snapshots:
       form-data-encoder: 1.7.2
       formdata-node: 4.4.1
       node-fetch: 2.7.0
+    optionalDependencies:
+      zod: 3.24.2
     transitivePeerDependencies:
       - encoding
 
@@ -1745,3 +1753,5 @@ snapshots:
       webidl-conversions: 3.0.1
 
   yallist@4.0.0: {}
+
+  zod@3.24.2: {}

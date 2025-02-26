@@ -22,7 +22,8 @@
   },
   "homepage": "https://github.com/ziioai/ai-util#readme",
   "files": [
-    "dist", "LICENSE"
+    "dist",
+    "LICENSE"
   ],
   "main": "./dist/ai-util.umd.cjs",
   "module": "./dist/ai-util.js",
@@ -44,7 +45,8 @@
     "json5": "^2.2.3",
     "lodash": "^4.17.21",
     "openai": "^4.85.1",
-    "vue": "^3.5.13"
+    "vue": "^3.5.13",
+    "zod": "^3.24.2"
   },
   "devDependencies": {
     "@types/lodash": "^4.17.15",

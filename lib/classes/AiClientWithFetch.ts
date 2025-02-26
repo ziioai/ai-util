@@ -158,6 +158,35 @@ class AiClient {
     }
   }
 
+  async * chatReasoningStream(
+    prompt: string,
+    systemPrompt: string|undefined=undefined,
+    historyMessages: Message[]=[],
+    otherParams: Any={},
+    emptyInput: boolean=false,
+  ) {
+    for await (const chunk of this.createChatStream({
+      model: this.defaultModel,
+      messages: [
+        ...(systemPrompt?.length ? [{role: "system", content: systemPrompt}] : []),
+        ...(historyMessages??[]),
+        ...(emptyInput ? [] : [{role: "user", content: prompt}]),
+      ],
+      // max_tokens: 150,
+      temperature: 0.4,
+      stream:true,
+      ...(otherParams??{})
+    })) {
+      if (chunk.done) {
+        yield {done: true};
+        break;
+      }
+      const reasoning_content = chunk?.choices?.[0]?.message?.reasoning_content;
+      const content = chunk?.choices?.[0]?.message?.content;
+      yield {reasoning_content, content};
+    }
+  }
+
   setAPIKey(apiKey: string) {
     this.apiKey = apiKey;
     this._api.apiKey = apiKey;
